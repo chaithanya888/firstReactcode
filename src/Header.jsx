@@ -1,20 +1,18 @@
+import studentpic from "./assets/graduated.png";
 
-function Header(){
-const profile={
-    student:"name",
-    id:78,
-    gender:"male",
-    class:10,
-};
+function Header(props){
+
     return( 
-        <header>
-            <h1>my website</h1>
+        <div className="Student">
+            
             <ul className="list">
-                <li><a herf="">{profile.student}</a></li>
-                <li><a herf="">{profile.id}</a></li>
-                <li><a herf="">{profile.class}</a></li>
+                <img className="profileimg" src={studentpic} alt="profile pic"></img>
+                <li><a herf="">Name: {props.name}</a></li>
+                <li><a herf="">Gender: {props.gender}</a></li>
+                <li><a herf="">Id: {props.id}</a></li>
+                <li><a herf="">Class: {props.class}</a></li>
             </ul>
-        </header>
+        </div>
     );
    }
    
